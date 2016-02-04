@@ -20,6 +20,7 @@ vector
 uv shell
 UDIM
 
+selection convert(to vtx,to edge,to face)
 '''
 
 import maya.cmds as cmds
