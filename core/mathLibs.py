@@ -47,3 +47,10 @@ class _math(object):
 		scale_ratio = unfold*mult
         
         return scale_ratio
+	
+	def convert_seletion(self,cur_sel,component):
+		get_sel = pm.ls(sl=1,fl=1)
+		if len(get_sel)>0 and component="vtx"
+			mesh = pm.listRelatives(pm.listRelatives(get_sel[0],p=1)[0],p=1)
+			vtx = cmds.ls(cmds.polyListComponentConversion(get_sel[0],tv=1),fl=1)
+		
