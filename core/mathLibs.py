@@ -19,6 +19,7 @@ material
 vector
 uv shell
 UDIM
+center of selection(with angle)
 
 selection convert(to vtx,to edge,to face)
 '''
