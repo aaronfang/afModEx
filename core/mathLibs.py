@@ -50,7 +50,44 @@ class _math(object):
 	
 	def convert_seletion(self,cur_sel,component):
 		get_sel = pm.ls(sl=1,fl=1)
-		if len(get_sel)>0 and component="vtx"
-			mesh = pm.listRelatives(pm.listRelatives(get_sel[0],p=1)[0],p=1)
-			vtx = cmds.ls(cmds.polyListComponentConversion(get_sel[0],tv=1),fl=1)
+		if len(get_sel)!=0:
+			if select is polyvtx or polyedge or polyface:
+				if component="vtx":
+					mesh = pm.listRelatives(pm.listRelatives(get_sel[0],p=1)[0],p=1)
+					shape = pm.listRelatives(get_sel[0],p=1)[0]
+					result = cmds.ls(cmds.polyListComponentConversion(get_sel[0],tv=1),fl=1)
+				elif len(get_sel)>0 and component="edge":
+					mesh = pm.listRelatives(pm.listRelatives(get_sel[0],p=1)[0],p=1)
+					shape = pm.listRelatives(get_sel[0],p=1)[0]
+					result = cmds.ls(cmds.polyListComponentConversion(get_sel[0],te=1),fl=1)
+				elif component="face":
+					mesh = pm.listRelatives(pm.listRelatives(get_sel[0],p=1)[0],p=1)
+					shape = pm.listRelatives(get_sel[0],p=1)[0]
+					result = cmds.ls(cmds.polyListComponentConversion(get_sel[0],tf=1),fl=1)
+				
+		return [mesh,shape,result]
 		
+	def define_selection():
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
