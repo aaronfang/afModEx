@@ -68,27 +68,24 @@ class _math(object):
 				
 		return [mesh,shape,result]
 		
-	def define_selection():
-		
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	def is_component(self,sel_list):
+		is_comp = []
+		for sel in sel_list:
+			if ".vtx[" in sel:
+				if "vtx" not in is_comp:
+					is_comp.append("vtx")
+				is_comp.append(sel)
+			elif ".e[" in sel:
+				if "edge" not in is_comp:
+					is_comp.append("edge")
+				is_comp.append(sel)
+			elif ".f[" in sel:
+				if "face" not in is_comp:
+					is_comp.append("face")
+				is_comp.append(sel)
+			elif ".map[" in sel:
+				if "uv" not in is_comp:
+					is_comp.append("uv")
+				is_comp.append(sel)
+		if len(is_comp[1:]) == len(sel_list):
+			return is_comp[0]
