@@ -1,2 +1,3 @@
-# afModelingTools
-This repo contains serial of scripts across modeling, uv, blendshapes, file I/O and etc. 
+# afModEx
+This repo contains serial scripts across modeling, uv, blendshapes, file I/O and etc. 
+copyright Aaron Fang
